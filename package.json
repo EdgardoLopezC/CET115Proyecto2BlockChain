@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "lite-server",
     "test": "truffle test",
-    "start": "node ./client/index.html"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
