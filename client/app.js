@@ -8,16 +8,7 @@ App = {
     await App.renderProcesses();
   },
   loadWeb3: async () => {
-
-    
-    if (process.env.MODE == 'development' || typeof window.web3 === 'undefined'){
-      App.web3Provider = new Web3.providers.HttpProvider(process.env.LOCAL_NODE);
-    }
-    else{
-        App.web3Provider = web3.currentProvider;
-    }
-
-  /*  console.log('Hola')
+   console.log('Hola')
     if (window.ethereum) {
 
 
@@ -29,7 +20,7 @@ App = {
       console.log(
         "No ethereum browser is installed. Try it installing MetaMask "
       );
-    } */
+    }
   },
   loadAccount: async () => {
     console.log('crear cargar cuenta')
