@@ -1,16 +1,4 @@
-var app = require('express')();
-
-var port = process.env.PORT || 3000;
-
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + 'client/index.html');
-});
-app.listen(port, function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-});
-
-
-/*var http = require('http');
+var http = require('http');
 var fs = require('fs');
 
 const port = process.env.PORT || 3000
@@ -21,6 +9,12 @@ http.createServer(function(req, res){
         res.write(data);
         res.end();
     });
-}).listen(port);*/
+}).listen(port);
 
+
+var connect = require('connect'),
+    serveStatic = require('serve-static');
+var app = connect();
+app.use(serveStatic("./client"));
+app.listen(port);
 
