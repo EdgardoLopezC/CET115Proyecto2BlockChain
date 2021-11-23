@@ -6,11 +6,11 @@ var app = express();
 
 const port = process.env.PORT || 3000
 
-server.configure(function(){
+app.configure(function(){
   app.use('',express.static(__dirname + '/client'));  
 });
 
-server.listen(port);
+app.listen(port);
 
 http.createServer(function(req, res){
     fs.readFile('./client/index.html',function (err, data){
