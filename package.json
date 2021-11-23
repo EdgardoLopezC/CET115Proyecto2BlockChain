@@ -7,9 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "lite-server",
-    "test": "truffle test",
-    "start": "node index.js"
+    "start": "lite-server",
+    "test": "truffle test"
   },
   "keywords": [],
   "author": "",
