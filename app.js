@@ -1,15 +1,14 @@
-var http = require('http'),
-    fs = require('fs');
+var http = require('http');
+var fs = require('fs');
 
 const port = process.env.PORT || 3000
 
-fs.readFile('./client/index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(port);
-});
+http.createServer(function(req, res){
+  fs.readFile('./client/index.html',function (err, data){
+      res.writeHead(200, {'Content-Type': 'text/html','Content-Length':data.length});
+      res.write(data);
+      res.end();
+  });
+}).listen(port);
+
+
