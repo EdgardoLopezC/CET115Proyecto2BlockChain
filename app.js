@@ -4,7 +4,7 @@ var fs = require('fs');
 var express = require('express'); 
 var app = express();
 
-app.use(express.static(__dirname + '/client'));
+app.use('/client',express.static(__dirname + '/client'));
 app.use('/build/contracts',express.static(__dirname + '/build/contracts'));
 app.use('/contracts',express.static(__dirname + '/contracts'));
 
