@@ -4,9 +4,7 @@
   "description": "",
   "main": "truffle-config.js",
   "engines": {
-    "node": "12.x",
-    "npm": "6.x"
-
+    "node": "12.x"
   },
   "directories": {
     "test": "test"
@@ -25,5 +23,14 @@
     "dotenv": "^10.0.0",
     "lite-server": "^2.6.1",
     "truffle-hdwallet-provider": "^1.0.17"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdgardoLopezC/CET115Proyecto2BlockChain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EdgardoLopezC/CET115Proyecto2BlockChain/issues"
+  },
+  "homepage": "https://github.com/EdgardoLopezC/CET115Proyecto2BlockChain#readme"
 }
