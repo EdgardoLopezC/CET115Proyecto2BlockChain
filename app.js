@@ -1,16 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 
-var express = require('express'); 
-var app = express();
-
 const port = process.env.PORT || 3000
-
-app.configure(function(){
-  app.use('',express.static(__dirname + '/client'));  
-});
-
-app.listen(port);
 
 http.createServer(function(req, res){
     fs.readFile('./client/index.html',function (err, data){
