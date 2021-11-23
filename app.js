@@ -1,8 +1,9 @@
-const express = require('express');
-const path = require('path');
-const router = express.Router();
+const http = require('http')
+const fs = require('fs')
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname+'/client/index.html'));
-  //__dirname : It will resolve to your project folder.
-});
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'content-type': 'text/html' })
+  fs.createReadStream('./client/index.html').pipe(res)
+})
+
+server.listen(process.env.PORT || 3000)
