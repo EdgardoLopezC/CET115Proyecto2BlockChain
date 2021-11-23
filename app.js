@@ -6,7 +6,6 @@ var app = express();
 
 app.use(express.static(__dirname + '/client'));
 app.use(express.static(__dirname + '/build/contracts'));
-app.use(express.static(__dirname + '/node_modules'));
 
 const port = process.env.PORT || 3000
 
