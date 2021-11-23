@@ -1,4 +1,8 @@
-var http = require('http');
-var connect = require('connect');
-var app = connect().use(connect.static(__dirname+'/client'));
-http.createServer(app).listen(8080);
+var express = require('express');
+var app = express();
+
+const port = process.env.PORT || 3000;
+
+app.use(express.static('./client'));
+
+app.listen(port);
