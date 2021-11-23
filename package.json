@@ -10,8 +10,9 @@
     "test": "test"
   },
   "scripts": {
-    "start": "lite-server",
-    "test": "truffle test"
+    "dev": "lite-server",
+    "test": "truffle test",
+    "start": "node ./client/index.html"
   },
   "keywords": [],
   "author": "",
