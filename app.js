@@ -20,11 +20,7 @@ http.createServer((req,res)=>{
     const readStream = fs.createReadStream('./client/app.js');
     res.writeHead(200,{'Content-type': 'text/html'});
     readStream.pipe(res);
-  
-  if (req.url == '/app.js') {
-    const readStream = fs.createReadStream('./node_modules/@truffle/contract/dist/truffle-contract.js');
-    res.writeHead(200,{'Content-type': 'text/html'});
-    readStream.pipe(res);
+
 }
 
 }).listen(port);
