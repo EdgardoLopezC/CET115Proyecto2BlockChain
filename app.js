@@ -10,5 +10,17 @@ http.createServer((req,res)=>{
       readStream.pipe(res);
   }
 
+  if (req.url == '/ui.js') {
+      const readStream = fs.createReadStream('./client/ui.js');
+      res.writeHead(200,{'Content-type': 'text/html'});
+      readStream.pipe(res);
+  }
+
+  if (req.url == '/app.js') {
+    const readStream = fs.createReadStream('./client/app.js');
+    res.writeHead(200,{'Content-type': 'text/html'});
+    readStream.pipe(res);
+}
+
 }).listen(port);
 
