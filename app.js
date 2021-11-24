@@ -22,7 +22,7 @@ http.createServer((req,res)=>{
     readStream.pipe(res);
   
   if (req.url == '/contrac.js') {
-    const readStream = fs.createReadStream('./node_modules/@truffle/contract/dist/truffle-contract.min.js');
+    const readStream = fs.createReadStream('/libs/@truffle/contract/dist/truffle-contract.min.js');
     res.writeHead(200,{'Content-type': 'text/html'});
     readStream.pipe(res);
 }
