@@ -32,7 +32,7 @@ App = {
   loadContract: async () => {
     console.log('cargar contrato')
     try {
-      const res = await fetch("ProcessesContract.json");
+      const res = await fetch("https://cdn.jsdelivr.net/gh/EdgardoLopezC/CET115Proyecto2BlockChain/build/contracts/ProcessesContract.json");
       const processesContractJSON = await res.json();
       App.contracts.processesContract = TruffleContract(processesContractJSON);
       App.contracts.processesContract.setProvider(App.web3Provider);
